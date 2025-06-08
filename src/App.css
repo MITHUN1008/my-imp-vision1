@@ -1,28 +1,52 @@
 
 #root {
-  max-width: 1280px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  text-align: left;
 }
 
-.card {
-  padding: 2em;
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Button hover effects */
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  color: white;
-  cursor: pointer;
-  transition: border-color 0.25s;
+  transition: all 0.2s ease-in-out;
 }
 
 button:hover {
-  border-color: #646cff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Input focus effects */
+input:focus {
+  transform: scale(1.02);
+}
+
+/* Card hover effects */
+.bg-white {
+  transition: transform 0.2s ease-in-out;
+}
+
+.bg-white:hover {
+  transform: translateY(-2px);
 }
