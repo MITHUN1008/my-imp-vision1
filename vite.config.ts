@@ -7,5 +7,14 @@ export default defineConfig({
   server: {
     port: 8080,
     host: true
+  },
+  // Handle the remix vite:dev command by making this compatible
+  build: {
+    outDir: 'build/client',
+    rollupOptions: {
+      input: {
+        main: './index.html'
+      }
+    }
   }
 })
